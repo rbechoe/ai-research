@@ -38,4 +38,77 @@ public class BehaviorTree : ScriptableObject
         AssetDatabase.SaveAssets();
     }
 
+    public void AddChild(Node parent, Node child)
+    {
+        DecoratorNode decorator = parent as DecoratorNode;
+        if (decorator)
+        {
+            decorator.child = child;
+        }
+
+        RootNode rootNode = parent as RootNode;
+        if (rootNode)
+        {
+            rootNode.child = child;
+        }
+
+        ControlFlowNode controlFlow = parent as ControlFlowNode;
+        if (controlFlow)
+        {
+            controlFlow.children.Add(child);
+        }
+    }
+
+    public void RemoveChild(Node parent, Node child)
+    {
+        DecoratorNode decorator = parent as DecoratorNode;
+        if (decorator)
+        {
+            decorator.child = null;
+        }
+
+        RootNode rootNode = parent as RootNode;
+        if (rootNode)
+        {
+            rootNode.child = null;
+        }
+
+        ControlFlowNode controlFlow = parent as ControlFlowNode;
+        if (controlFlow)
+        {
+            controlFlow.children.Remove(child);
+        }
+    }
+
+    public List<Node> GetChildren(Node parent)
+    {
+        List<Node> children = new List<Node>();
+
+        DecoratorNode decorator = parent as DecoratorNode;
+        if (decorator && decorator.child != null)
+        {
+            children.Add(decorator.child);
+        }
+
+        RootNode rootNode = parent as RootNode;
+        if (rootNode && rootNode.child != null)
+        {
+            children.Add(rootNode.child);
+        }
+
+        ControlFlowNode controlFlow = parent as ControlFlowNode;
+        if (controlFlow)
+        {
+            return controlFlow.children;
+        }
+
+        return children;
+    }
+
+    public BehaviorTree Clone()
+    {
+        BehaviorTree tree = Instantiate(this);
+        tree.rootNode = tree.rootNode.Clone();
+        return tree;
+    }
 }
