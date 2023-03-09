@@ -74,6 +74,8 @@
 
 #description {
     font-size: 10px;
+    white-space: normal;
+    width: 150px;
 }
 
 #divider {
@@ -96,4 +98,29 @@
 
 .decorator #input {
     background-color: rgba(137, 166, 251, 255);
+}
+
+#node-state {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 255);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.running #node-state {
+    background-color: rgba(164, 124, 0, 255);
+}
+
+.success #node-state {
+    background-color: rgba(13, 159, 10, 255);
+}
+
+.failure #node-state {
+    background-color: rgba(154, 0, 0, 255);
 }

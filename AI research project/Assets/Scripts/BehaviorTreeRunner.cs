@@ -8,7 +8,8 @@ public class BehaviorTreeRunner : MonoBehaviour
 
     private void Start()
     {
-       tree = tree.Clone();
+        tree = tree.Clone();
+        tree.Bind(GetComponent<AIController>());
     }
 
     private void Update()

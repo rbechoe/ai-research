@@ -2,6 +2,8 @@ using UnityEngine;
 using System;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine.UIElements;
+using UnityEditor;
+using UnityEditor.UIElements;
 
 public class NodeView : UnityEditor.Experimental.GraphView.Node
 {
@@ -22,6 +24,10 @@ public class NodeView : UnityEditor.Experimental.GraphView.Node
         CreateInputPorts();
         CreateOutputPorts();
         SetupClasses();
+
+        Label descriptionLabel = this.Q<Label>("description");
+        descriptionLabel.bindingPath = "description";
+        descriptionLabel.Bind(new SerializedObject(node));
     }
 
     private void SetupClasses()
@@ -96,8 +102,10 @@ public class NodeView : UnityEditor.Experimental.GraphView.Node
     public override void SetPosition(Rect newPos)
     {
         base.SetPosition(newPos);
+        Undo.RecordObject(node, "Behavior Tree (Set Position)");
         node.position.x = newPos.xMin;
         node.position.y = newPos.yMin;
+        EditorUtility.SetDirty(node);
     }
 
     public override void OnSelected()
@@ -106,6 +114,46 @@ public class NodeView : UnityEditor.Experimental.GraphView.Node
         if (OnNodeSelected != null)
         {
             OnNodeSelected.Invoke(this);
+        }
+    }
+
+    public void SortChildren()
+    {
+        ControlFlowNode controlFlowNode = node as ControlFlowNode;
+        if (controlFlowNode)
+        {
+            controlFlowNode.children.Sort(SortByHorizontalPosition);
+        }
+    }
+
+    private int SortByHorizontalPosition(Node left, Node right)
+    {
+        return left.position.x < right.position.x ? -1 : 1;
+    }
+
+    public void UpdateState()
+    {
+        RemoveFromClassList("running");
+        RemoveFromClassList("failure");
+        RemoveFromClassList("success");
+
+        if(Application.isPlaying)
+        {
+            switch (node.state)
+            {
+                case State.Running:
+                    if (node.started)
+                    {
+                        AddToClassList("running");
+                    }
+                    break;
+                case State.Failure:
+                    AddToClassList("failure");
+                    break;
+                case State.Success:
+                    AddToClassList("success");
+                    break;
+            }
         }
     }
 }

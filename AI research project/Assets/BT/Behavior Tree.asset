@@ -1,5 +1,52 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8445842477575662729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed17e90382a11c4fb3eaeb845525ca4, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 86d34d2d79229074ba4ab6dcb8c6b3ed
+  position: {x: 384, y: 297}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: 
+  duration: 2
+--- !u!114 &-6715707899555774757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf29b5ece97e0e428e27c27d668fe37, type: 3}
+  m_Name: RepeatNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 8d72d01f52e3a7640b2ffaed08165290
+  position: {x: 0, y: 0}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: 
+  child: {fileID: 0}
+  inviteLoop: 1
+  crashOnFail: 0
+  loopCount: 100
 --- !u!114 &-5241908637118332799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,7 +62,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 9dc99e5cf1aa2f147a06b33a5ce035da
-  position: {x: 309.1841, y: 315}
+  position: {x: 323.91998, y: 111.47998}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: 
   message: This is a test message
 --- !u!114 &-5010424740460934074
 MonoBehaviour:
@@ -32,8 +84,56 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 95bb7022459401a4a9783fa2ba99170b
-  position: {x: 1.4999237, y: -407.50198}
-  child: {fileID: 6448160142999273681}
+  position: {x: -10, y: -432}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: 
+  child: {fileID: 6025226781980341190}
+--- !u!114 &-4446240775493770814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 527993f176e41aa47a78144119cf662a, type: 3}
+  m_Name: DebugLogNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 7ba05d8a2b1bea544abf3a22c5b98fe1
+  position: {x: 1011, y: 119}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: 
+  message: this should not fire
+--- !u!114 &-3829061959828411060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e81532313992045ad30fbff66b46d1, type: 3}
+  m_Name: CrashNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ea68ae7a88c119849a7e670eee07025e
+  position: {x: -227.0001, y: 374}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: Crashes
 --- !u!114 &-3546601196170888994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,10 +149,69 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a2bb74f882ccb60458b065acdbc6e3b6
-  position: {x: -472.20026, y: 454.60004}
+  position: {x: -435, y: 242}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: Crash on fail
   children:
   - {fileID: 5499539737953695784}
   - {fileID: -1985723942679464100}
+  - {fileID: -3829061959828411060}
+  crashOnFail: 1
+  stopAtFirstSuccess: 0
+--- !u!114 &-3001260657769572924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0244e1060f055ec4caaf708739f68e12, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 63f82601fe800a94a820d390924afa88
+  position: {x: 786.30774, y: -9.999941}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: 
+  children: []
+  crashOnFail: 0
+  stopAtFirstSuccess: 0
+--- !u!114 &-2268360235993152994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0244e1060f055ec4caaf708739f68e12, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 998f95b4975698c408ba09b081424652
+  position: {x: 563, y: 168}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: 
+  children:
+  - {fileID: -8445842477575662729}
+  - {fileID: 7531356297563135478}
+  - {fileID: -1396618950696987073}
+  crashOnFail: 0
+  stopAtFirstSuccess: 0
 --- !u!114 &-1985723942679464100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,7 +227,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 7b44cc689ea2dac429af1d3f24bc835d
-  position: {x: -600.2002, y: 594.60004}
+  position: {x: -436, y: 371}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: 
   message: AAAAAA
 --- !u!114 &-1947751427733129231
 MonoBehaviour:
@@ -85,7 +249,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: fd6f8b7a1c2284341a4a3f6f27e525cb
-  position: {x: -279.9, y: 323.00003}
+  position: {x: -77, y: 109}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: 
   message: number 2
 --- !u!114 &-1710008428252775483
 MonoBehaviour:
@@ -103,6 +272,11 @@ MonoBehaviour:
   started: 0
   guid: ed8e46e71415ddd418fd317d901aad75
   position: {x: 0, y: 0}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: 
   message: 
 --- !u!114 &-1422296172625222296
 MonoBehaviour:
@@ -119,10 +293,39 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e11be7ca5ae176c4f8d3340e1840c12b
-  position: {x: 202.03255, y: 79.499985}
+  position: {x: 218, y: -18}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: 
   children:
-  - {fileID: -5241908637118332799}
   - {fileID: 2268085270239881978}
+  - {fileID: -5241908637118332799}
+  crashOnFail: 0
+  stopAtFirstSuccess: 0
+--- !u!114 &-1396618950696987073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 527993f176e41aa47a78144119cf662a, type: 3}
+  m_Name: DebugLogNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: e3519fe8868cb4442918ef360c4df7df
+  position: {x: 745.3809, y: 299.0001}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: 
+  message: should have crashed
 --- !u!114 &-788302664468495857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +342,34 @@ MonoBehaviour:
   started: 0
   guid: 875f68238eefd384282fd56dfac947a9
   position: {x: 0, y: 0}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: 
   duration: 1
+--- !u!114 &-475631084200749377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 527993f176e41aa47a78144119cf662a, type: 3}
+  m_Name: DebugLogNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a9461dd49c464404192a2f39f1f15c45
+  position: {x: 794, y: 119}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: 
+  message: I have succeeded!
 --- !u!114 &-219046556756681111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,10 +385,15 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a567f545359e11d429349358351f370d
-  position: {x: -468.9, y: 323.00003}
+  position: {x: -434, y: 107}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: Repeats 5 times
   child: {fileID: -3546601196170888994}
   inviteLoop: 0
-  stopOnFail: 0
+  crashOnFail: 1
   loopCount: 5
 --- !u!114 &11400000
 MonoBehaviour:
@@ -187,6 +422,19 @@ MonoBehaviour:
   - {fileID: 6362262647503587493}
   - {fileID: -3546601196170888994}
   - {fileID: 5499539737953695784}
+  - {fileID: 6025226781980341190}
+  - {fileID: -3829061959828411060}
+  - {fileID: -3001260657769572924}
+  - {fileID: -2268360235993152994}
+  - {fileID: -475631084200749377}
+  - {fileID: -4446240775493770814}
+  - {fileID: -8445842477575662729}
+  - {fileID: 7531356297563135478}
+  - {fileID: -1396618950696987073}
+  - {fileID: -6715707899555774757}
+  blackboard:
+    moveToPosition: {x: 1, y: 2, z: 3}
+    moveToObject: {fileID: 0}
 --- !u!114 &2268085270239881978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +450,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 25fa60b7172d5a541be2a168294025eb
-  position: {x: 93.34995, y: 315}
+  position: {x: 122, y: 112}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: Waits 1 second
   duration: 1
 --- !u!114 &4217731425576620346
 MonoBehaviour:
@@ -219,7 +472,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 543254f514ac65f4d947a640d06da3a9
-  position: {x: -113.89996, y: 323.00003}
+  position: {x: -248, y: 108}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: Waits 1 second
   duration: 1
 --- !u!114 &5499539737953695784
 MonoBehaviour:
@@ -236,8 +494,38 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 3de072acab669874e91ac3a06809581a
-  position: {x: -358.20026, y: 602.6001}
+  position: {x: -641.03265, y: 373.00003}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: Waits 1 second
   duration: 1
+--- !u!114 &6025226781980341190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf29b5ece97e0e428e27c27d668fe37, type: 3}
+  m_Name: RepeatNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: da4cfb97d6e84f642aa2254963da0182
+  position: {x: -9, y: -286}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: Invinite repeat
+  child: {fileID: 6448160142999273681}
+  inviteLoop: 1
+  crashOnFail: 0
+  loopCount: 100
 --- !u!114 &6362262647503587493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,11 +541,18 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c01ad775b4bc58e46a4cb03abd56cde2
-  position: {x: -271.9999, y: 79.49997}
+  position: {x: -247, y: -19}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: Continue on fail
   children:
-  - {fileID: -1947751427733129231}
-  - {fileID: 4217731425576620346}
   - {fileID: -219046556756681111}
+  - {fileID: 4217731425576620346}
+  - {fileID: -1947751427733129231}
+  crashOnFail: 0
+  stopAtFirstSuccess: 0
 --- !u!114 &6448160142999273681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,7 +568,35 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 576ade7f7a438cf4fbc69173bbd5c415
-  position: {x: 6, y: -147}
+  position: {x: -8, y: -147}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: 
   children:
   - {fileID: 6362262647503587493}
   - {fileID: -1422296172625222296}
+  crashOnFail: 0
+  stopAtFirstSuccess: 0
+--- !u!114 &7531356297563135478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e81532313992045ad30fbff66b46d1, type: 3}
+  m_Name: CrashNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 7b1c4f04e4e51464abff6da8936f64b3
+  position: {x: 563.99994, y: 299.0001}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+  aiController: {fileID: 0}
+  description: 
