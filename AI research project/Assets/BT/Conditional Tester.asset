@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8545539167736816285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0244e1060f055ec4caaf708739f68e12, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 2
+  started: 0
+  guid: 5f6b309a9716571468a0797e4f3c4996
+  position: {x: 371.00003, y: -120.98209}
+  blackboard:
+    destination: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+    moveSpeed: 0
+  aiController: {fileID: 0}
+  parent: {fileID: 505381335953116420}
+  description: 
+  children: []
+  crashOnFail: 0
+  stopAtFirstSuccess: 1
+--- !u!114 &-1260202221053693982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a766a0e34acc64583063717079c723, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 1
+  guid: 3566188b3d996944aaa880099f7f6ac9
+  position: {x: 371.00003, y: -362.19086}
+  blackboard:
+    destination: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+    moveSpeed: 0
+  aiController: {fileID: 0}
+  parent: {fileID: 0}
+  description: 
+  child: {fileID: 505381335953116420}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347690af751b60743baa18f59df5c9c7, type: 3}
+  m_Name: Conditional Tester
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -1260202221053693982}
+  treeState: 0
+  nodes:
+  - {fileID: -1260202221053693982}
+  - {fileID: -8545539167736816285}
+  - {fileID: 505381335953116420}
+  blackboard:
+    destination: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+    moveSpeed: 0
+--- !u!114 &505381335953116420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf29b5ece97e0e428e27c27d668fe37, type: 3}
+  m_Name: RepeatNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 1
+  guid: 86984c23943ab0749a3cc668027a87a0
+  position: {x: 371.00003, y: -243.66997}
+  blackboard:
+    destination: {x: 0, y: 0, z: 0}
+    moveToObject: {fileID: 0}
+    moveSpeed: 0
+  aiController: {fileID: 0}
+  parent: {fileID: -1260202221053693982}
+  description: 
+  child: {fileID: -8545539167736816285}
+  inviteLoop: 1
+  crashOnFail: 0
+  loopCount: 100

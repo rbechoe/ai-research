@@ -15,11 +15,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 86d34d2d79229074ba4ab6dcb8c6b3ed
-  position: {x: 399, y: 370}
+  position: {x: 171, y: 370}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: 
   duration: 2
 --- !u!114 &-6715707899555774757
@@ -37,11 +39,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8d72d01f52e3a7640b2ffaed08165290
-  position: {x: 579, y: 119.00001}
+  position: {x: 351, y: 119}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: 
   child: {fileID: -2268360235993152994}
   inviteLoop: 0
@@ -62,11 +66,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 9dc99e5cf1aa2f147a06b33a5ce035da
-  position: {x: 323.91998, y: 111.47998}
+  position: {x: 96, y: 111}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: 
   message: This is a test message
 --- !u!114 &-5010424740460934074
@@ -86,9 +92,11 @@ MonoBehaviour:
   guid: 95bb7022459401a4a9783fa2ba99170b
   position: {x: -10, y: -432}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: 
   child: {fileID: 6025226781980341190}
 --- !u!114 &-4446240775493770814
@@ -106,11 +114,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 7ba05d8a2b1bea544abf3a22c5b98fe1
-  position: {x: 1011, y: 119}
+  position: {x: 783, y: 119}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: 
   message: this should not fire
 --- !u!114 &-3829061959828411060
@@ -128,11 +138,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ea68ae7a88c119849a7e670eee07025e
-  position: {x: -227.0001, y: 374}
+  position: {x: -455, y: 374}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: Crashes
 --- !u!114 &-3546601196170888994
 MonoBehaviour:
@@ -149,11 +161,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a2bb74f882ccb60458b065acdbc6e3b6
-  position: {x: -435, y: 242}
+  position: {x: -663, y: 242}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: Crash on fail
   children:
   - {fileID: 5499539737953695784}
@@ -176,11 +190,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 63f82601fe800a94a820d390924afa88
-  position: {x: 792, y: -10}
+  position: {x: 564, y: -10}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: 
   children:
   - {fileID: -6715707899555774757}
@@ -203,11 +219,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 998f95b4975698c408ba09b081424652
-  position: {x: 578, y: 241}
+  position: {x: 350, y: 241}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: 
   children:
   - {fileID: -8445842477575662729}
@@ -230,11 +248,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 7b44cc689ea2dac429af1d3f24bc835d
-  position: {x: -436, y: 371}
+  position: {x: -664, y: 371}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: 
   message: AAAAAA
 --- !u!114 &-1947751427733129231
@@ -252,11 +272,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: fd6f8b7a1c2284341a4a3f6f27e525cb
-  position: {x: -77, y: 109}
+  position: {x: -305, y: 109}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: 
   message: number 2
 --- !u!114 &-1710008428252775483
@@ -276,9 +298,11 @@ MonoBehaviour:
   guid: ed8e46e71415ddd418fd317d901aad75
   position: {x: 0, y: 0}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: 
   message: 
 --- !u!114 &-1422296172625222296
@@ -296,11 +320,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e11be7ca5ae176c4f8d3340e1840c12b
-  position: {x: 218, y: -18}
+  position: {x: -10, y: -18}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: 
   children:
   - {fileID: 2268085270239881978}
@@ -322,11 +348,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e3519fe8868cb4442918ef360c4df7df
-  position: {x: 760, y: 372}
+  position: {x: 532, y: 372}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: 
   message: should have crashed
 --- !u!114 &-788302664468495857
@@ -346,9 +374,11 @@ MonoBehaviour:
   guid: 875f68238eefd384282fd56dfac947a9
   position: {x: 0, y: 0}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: 
   duration: 1
 --- !u!114 &-475631084200749377
@@ -366,11 +396,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a9461dd49c464404192a2f39f1f15c45
-  position: {x: 794, y: 127}
+  position: {x: 566, y: 127}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: 
   message: I have succeeded!
 --- !u!114 &-219046556756681111
@@ -388,11 +420,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a567f545359e11d429349358351f370d
-  position: {x: -434, y: 107}
+  position: {x: -662, y: 107}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: Repeats 5 times
   child: {fileID: -3546601196170888994}
   inviteLoop: 0
@@ -436,8 +470,9 @@ MonoBehaviour:
   - {fileID: -1396618950696987073}
   - {fileID: -6715707899555774757}
   blackboard:
-    moveToPosition: {x: 1, y: 2, z: 3}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
 --- !u!114 &2268085270239881978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,11 +488,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 25fa60b7172d5a541be2a168294025eb
-  position: {x: 122, y: 112}
+  position: {x: -106, y: 112}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: Waits 1 second
   duration: 1
 --- !u!114 &4217731425576620346
@@ -475,11 +512,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 543254f514ac65f4d947a640d06da3a9
-  position: {x: -248, y: 108}
+  position: {x: -476, y: 108}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: Waits 1 second
   duration: 1
 --- !u!114 &5499539737953695784
@@ -497,11 +536,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 3de072acab669874e91ac3a06809581a
-  position: {x: -641.03265, y: 373.00003}
+  position: {x: -869, y: 373}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: Waits 1 second
   duration: 1
 --- !u!114 &6025226781980341190
@@ -521,9 +562,11 @@ MonoBehaviour:
   guid: da4cfb97d6e84f642aa2254963da0182
   position: {x: -9, y: -286}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: Invinite repeat
   child: {fileID: 6448160142999273681}
   inviteLoop: 1
@@ -544,11 +587,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c01ad775b4bc58e46a4cb03abd56cde2
-  position: {x: -247, y: -19}
+  position: {x: -475, y: -19}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: Continue on fail
   children:
   - {fileID: -219046556756681111}
@@ -573,9 +618,11 @@ MonoBehaviour:
   guid: 576ade7f7a438cf4fbc69173bbd5c415
   position: {x: -8, y: -147}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: 
   children:
   - {fileID: 6362262647503587493}
@@ -598,9 +645,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 7b1c4f04e4e51464abff6da8936f64b3
-  position: {x: 579, y: 372}
+  position: {x: 351, y: 372}
   blackboard:
-    moveToPosition: {x: 0, y: 0, z: 0}
+    destination: {x: 0, y: 0, z: 0}
     moveToObject: {fileID: 0}
+    moveSpeed: 0
   aiController: {fileID: 0}
+  parent: {fileID: 0}
   description: 

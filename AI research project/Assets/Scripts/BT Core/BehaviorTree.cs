@@ -55,18 +55,35 @@ public class BehaviorTree : ScriptableObject
             case DecoratorNode:
                 Undo.RecordObject((DecoratorNode)parent, "Behavior Tree (AddChild)");
                 ((DecoratorNode)parent).child = child;
+                child.parent = parent;
                 EditorUtility.SetDirty((DecoratorNode)parent);
                 break;
 
             case RootNode:
                 Undo.RecordObject((RootNode)parent, "Behavior Tree (AddChild)");
                 ((RootNode)parent).child = child;
+                child.parent = parent;
                 EditorUtility.SetDirty((RootNode)parent);
+                break;
+
+            case TypeNode:
+                Undo.RecordObject((TypeNode)parent, "Behavior Tree (AddChild)");
+                ((TypeNode)parent).child = child;
+                if (child.GetType() == typeof(ConditionalNode))
+                {
+                    ((ConditionalNode)child).typeParents.Add(parent);
+                }
+                else
+                {
+                    child.parent = parent;
+                }
+                EditorUtility.SetDirty((TypeNode)parent);
                 break;
 
             case ControlFlowNode:
                 Undo.RecordObject((ControlFlowNode)parent, "Behavior Tree (AddChild)");
                 ((ControlFlowNode)parent).children.Add(child);
+                child.parent = parent;
                 EditorUtility.SetDirty((ControlFlowNode)parent);
                 break;
         }
@@ -79,18 +96,35 @@ public class BehaviorTree : ScriptableObject
             case DecoratorNode:
                 Undo.RecordObject((DecoratorNode)parent, "Behavior Tree (RemoveChild)");
                 ((DecoratorNode)parent).child = null;
+                child.parent = null;
                 EditorUtility.SetDirty((DecoratorNode)parent);
                 break;
 
             case RootNode:
                 Undo.RecordObject((RootNode)parent, "Behavior Tree (RemoveChild)");
                 ((RootNode)parent).child = null;
+                child.parent = null;
                 EditorUtility.SetDirty((RootNode)parent);
+                break;
+
+            case TypeNode:
+                Undo.RecordObject((TypeNode)parent, "Behavior Tree (RemoveChild)");
+                ((TypeNode)parent).child = null;
+                if (child.GetType() == typeof(ConditionalNode))
+                {
+                    ((ConditionalNode)child).typeParents.Remove(parent);
+                }
+                else
+                {
+                    child.parent = null;
+                }
+                EditorUtility.SetDirty((TypeNode)parent);
                 break;
 
             case ControlFlowNode:
                 Undo.RecordObject((ControlFlowNode)parent, "Behavior Tree (RemoveChild)");
                 ((ControlFlowNode)parent).children.Remove(child);
+                child.parent = null;
                 EditorUtility.SetDirty((ControlFlowNode)parent);
                 break;
         }
@@ -110,6 +144,12 @@ public class BehaviorTree : ScriptableObject
         if (rootNode && rootNode.child != null)
         {
             children.Add(rootNode.child);
+        }
+
+        TypeNode typeNode = parent as TypeNode;
+        if (typeNode && typeNode.child != null)
+        {
+            children.Add(typeNode.child);
         }
 
         ControlFlowNode controlFlow = parent as ControlFlowNode;

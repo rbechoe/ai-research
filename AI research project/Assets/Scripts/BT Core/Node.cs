@@ -14,6 +14,8 @@ public abstract class Node : ScriptableObject
     public Blackboard blackboard;
     [HideInInspector]
     public AIController aiController;
+    [HideInInspector]
+    public Node parent;
     [TextArea]
     public string description;
 

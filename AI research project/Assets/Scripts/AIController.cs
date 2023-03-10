@@ -1,18 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AIController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private NavMeshAgent agent;
+
+    private void Awake()
+    {
+        agent = GetComponent<NavMeshAgent>();
+    }
+
+    private void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetDestination(Vector3 position)
     {
-        
+        agent.destination = position;
+    }
+
+    public void SetSpeed(float speed)
+    {
+        agent.speed = speed;
     }
 }

@@ -43,6 +43,9 @@ public class NodeView : UnityEditor.Experimental.GraphView.Node
             case DecoratorNode:
                 AddToClassList("decorator");
                 break;
+            case TypeNode:
+                AddToClassList("type");
+                break;
             case RootNode:
                 AddToClassList("root");
                 break;
@@ -59,7 +62,13 @@ public class NodeView : UnityEditor.Experimental.GraphView.Node
             case ControlFlowNode:
                 input = InstantiatePort(Orientation.Vertical, Direction.Input, Port.Capacity.Single, typeof(bool));
                 break;
+            case ConditionalNode:
+                input = InstantiatePort(Orientation.Vertical, Direction.Input, Port.Capacity.Multi, typeof(bool));
+                break;
             case DecoratorNode:
+                input = InstantiatePort(Orientation.Vertical, Direction.Input, Port.Capacity.Single, typeof(bool));
+                break;
+            case TypeNode:
                 input = InstantiatePort(Orientation.Vertical, Direction.Input, Port.Capacity.Single, typeof(bool));
                 break;
             case RootNode:
@@ -87,6 +96,9 @@ public class NodeView : UnityEditor.Experimental.GraphView.Node
                 output = InstantiatePort(Orientation.Vertical, Direction.Output, Port.Capacity.Single, typeof(bool));
                 break;
             case RootNode:
+                output = InstantiatePort(Orientation.Vertical, Direction.Output, Port.Capacity.Single, typeof(bool));
+                break;
+            case TypeNode:
                 output = InstantiatePort(Orientation.Vertical, Direction.Output, Port.Capacity.Single, typeof(bool));
                 break;
         }
@@ -123,6 +135,15 @@ public class NodeView : UnityEditor.Experimental.GraphView.Node
         if (controlFlowNode)
         {
             controlFlowNode.children.Sort(SortByHorizontalPosition);
+        }
+    }
+
+    public void SortParents()
+    {
+        ConditionalNode conditionalNode = node as ConditionalNode;
+        if (conditionalNode)
+        {
+            conditionalNode.typeParents.Sort(SortByHorizontalPosition);
         }
     }
 

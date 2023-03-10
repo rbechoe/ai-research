@@ -4,3 +4,13 @@ public enum State
     Failure,
     Success
 }
+
+public enum ConditionType
+{
+    Equal,
+    NotEqual,
+    GreaterThan,
+    LessThan,
+    GreaterThanOrEqual,
+    LessThanOrEqual,
+}

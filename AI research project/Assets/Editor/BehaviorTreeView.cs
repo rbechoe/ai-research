@@ -113,6 +113,7 @@ public class BehaviorTreeView : GraphView
             {
                 NodeView nodeView = n as NodeView;
                 nodeView.SortChildren();
+                nodeView.SortParents();
             });
         }
 
@@ -125,6 +126,7 @@ public class BehaviorTreeView : GraphView
         GenerateMenuActions(evt, TypeCache.GetTypesDerivedFrom<ActionNode>());
         GenerateMenuActions(evt, TypeCache.GetTypesDerivedFrom<ControlFlowNode>());
         GenerateMenuActions(evt, TypeCache.GetTypesDerivedFrom<DecoratorNode>());
+        GenerateMenuActions(evt, TypeCache.GetTypesDerivedFrom<TypeNode>());
     }
 
     private void GenerateMenuActions(ContextualMenuPopulateEvent evt, TypeCache.TypeCollection types)
