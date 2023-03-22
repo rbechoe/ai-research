@@ -15,11 +15,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 86d34d2d79229074ba4ab6dcb8c6b3ed
-  position: {x: 171, y: 370}
+  position: {x: 118.86049, y: 369.0001}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: 
@@ -39,11 +41,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8d72d01f52e3a7640b2ffaed08165290
-  position: {x: 351, y: 119}
+  position: {x: 298.8605, y: 118.00009}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: 
@@ -68,9 +72,11 @@ MonoBehaviour:
   guid: 9dc99e5cf1aa2f147a06b33a5ce035da
   position: {x: 96, y: 111}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: 
@@ -92,9 +98,11 @@ MonoBehaviour:
   guid: 95bb7022459401a4a9783fa2ba99170b
   position: {x: -10, y: -432}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: 
@@ -114,11 +122,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 7ba05d8a2b1bea544abf3a22c5b98fe1
-  position: {x: 783, y: 119}
+  position: {x: 730.86053, y: 118.00009}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: 
@@ -140,9 +150,11 @@ MonoBehaviour:
   guid: ea68ae7a88c119849a7e670eee07025e
   position: {x: -455, y: 374}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: Crashes
@@ -163,9 +175,11 @@ MonoBehaviour:
   guid: a2bb74f882ccb60458b065acdbc6e3b6
   position: {x: -663, y: 242}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: Crash on fail
@@ -190,11 +204,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 63f82601fe800a94a820d390924afa88
-  position: {x: 564, y: -10}
+  position: {x: 511.86047, y: -10.999938}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: 
@@ -219,11 +235,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 998f95b4975698c408ba09b081424652
-  position: {x: 350, y: 241}
+  position: {x: 297.8604, y: 240.00008}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: 
@@ -250,9 +268,11 @@ MonoBehaviour:
   guid: 7b44cc689ea2dac429af1d3f24bc835d
   position: {x: -664, y: 371}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: 
@@ -274,9 +294,11 @@ MonoBehaviour:
   guid: fd6f8b7a1c2284341a4a3f6f27e525cb
   position: {x: -305, y: 109}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: 
@@ -298,9 +320,11 @@ MonoBehaviour:
   guid: ed8e46e71415ddd418fd317d901aad75
   position: {x: 0, y: 0}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: 
@@ -322,9 +346,11 @@ MonoBehaviour:
   guid: e11be7ca5ae176c4f8d3340e1840c12b
   position: {x: -10, y: -18}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: 
@@ -348,11 +374,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e3519fe8868cb4442918ef360c4df7df
-  position: {x: 532, y: 372}
+  position: {x: 479.86047, y: 371.0001}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: 
@@ -374,9 +402,11 @@ MonoBehaviour:
   guid: 875f68238eefd384282fd56dfac947a9
   position: {x: 0, y: 0}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: 
@@ -396,11 +426,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a9461dd49c464404192a2f39f1f15c45
-  position: {x: 566, y: 127}
+  position: {x: 513.8604, y: 126.00008}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: 
@@ -422,9 +454,11 @@ MonoBehaviour:
   guid: a567f545359e11d429349358351f370d
   position: {x: -662, y: 107}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: Repeats 5 times
@@ -470,9 +504,11 @@ MonoBehaviour:
   - {fileID: -1396618950696987073}
   - {fileID: -6715707899555774757}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
 --- !u!114 &2268085270239881978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,9 +526,11 @@ MonoBehaviour:
   guid: 25fa60b7172d5a541be2a168294025eb
   position: {x: -106, y: 112}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: Waits 1 second
@@ -514,9 +552,11 @@ MonoBehaviour:
   guid: 543254f514ac65f4d947a640d06da3a9
   position: {x: -476, y: 108}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: Waits 1 second
@@ -538,9 +578,11 @@ MonoBehaviour:
   guid: 3de072acab669874e91ac3a06809581a
   position: {x: -869, y: 373}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: Waits 1 second
@@ -562,9 +604,11 @@ MonoBehaviour:
   guid: da4cfb97d6e84f642aa2254963da0182
   position: {x: -9, y: -286}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: Invinite repeat
@@ -589,9 +633,11 @@ MonoBehaviour:
   guid: c01ad775b4bc58e46a4cb03abd56cde2
   position: {x: -475, y: -19}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: Continue on fail
@@ -618,9 +664,11 @@ MonoBehaviour:
   guid: 576ade7f7a438cf4fbc69173bbd5c415
   position: {x: -8, y: -147}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: 
@@ -645,11 +693,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 7b1c4f04e4e51464abff6da8936f64b3
-  position: {x: 351, y: 372}
+  position: {x: 298.8605, y: 371.0001}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: 

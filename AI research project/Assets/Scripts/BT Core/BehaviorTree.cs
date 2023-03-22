@@ -189,6 +189,8 @@ public class BehaviorTree : ScriptableObject
         {
             node.aiController = aiController;
             node.blackboard = blackboard;
+            node.blackboard.nodes = aiController.nodes;
+            node.blackboard.target = aiController.target;
         });
     }
 }

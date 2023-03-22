@@ -1,0 +1,293 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9049708660010634253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf29b5ece97e0e428e27c27d668fe37, type: 3}
+  m_Name: RepeatNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 0f9302cac8e11bd4ead195fc71832619
+  position: {x: 232, y: 389}
+  blackboard:
+    nodeIndex: 0
+    moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    target: {fileID: 0}
+    nodes: []
+  aiController: {fileID: 0}
+  parent: {fileID: -1573532523215425190}
+  description: Loop until fail
+  child: {fileID: 4970703242924194517}
+  inviteLoop: 1
+  crashOnFail: 1
+  loopCount: 100
+--- !u!114 &-7505441275935422266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed17e90382a11c4fb3eaeb845525ca4, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 33d58341c4972ec4c93d762225654bae
+  position: {x: 336.7, y: 643.70416}
+  blackboard:
+    nodeIndex: 0
+    moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    target: {fileID: 0}
+    nodes: []
+  aiController: {fileID: 0}
+  parent: {fileID: 4970703242924194517}
+  description: 
+  duration: 1
+--- !u!114 &-2916580346303638772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617ccc99e9ae1d1489a16886f9e238d4, type: 3}
+  m_Name: MoveToTarget
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 227927f399d206c4aa5c033d28ddcd08
+  position: {x: -197, y: 393}
+  blackboard:
+    nodeIndex: 0
+    moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    target: {fileID: 0}
+    nodes: []
+  aiController: {fileID: 0}
+  parent: {fileID: -1573532523215425190}
+  description: 
+  minimalDistance: 3
+  maximalDistance: 20
+  crashIfTooFar: 0
+--- !u!114 &-1841156526966360190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a766a0e34acc64583063717079c723, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: f0c8fff9869754f4a905a41a22fe452b
+  position: {x: 0, y: 0}
+  blackboard:
+    nodeIndex: 0
+    moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    target: {fileID: 0}
+    nodes: []
+  aiController: {fileID: 0}
+  parent: {fileID: 0}
+  description: 
+  child: {fileID: 5957902253715225881}
+--- !u!114 &-1573532523215425190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0244e1060f055ec4caaf708739f68e12, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 1f19e8d7c1e20e54aa5887777e0a4bf1
+  position: {x: 6.9999046, y: 254.31213}
+  blackboard:
+    nodeIndex: 0
+    moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    target: {fileID: 0}
+    nodes: []
+  aiController: {fileID: 0}
+  parent: {fileID: 5957902253715225881}
+  description: 
+  children:
+  - {fileID: -2916580346303638772}
+  - {fileID: 4060172571832355026}
+  - {fileID: -9049708660010634253}
+  crashOnFail: 0
+  stopAtFirstSuccess: 0
+--- !u!114 &-1207986698520952161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 070541dc3389c8b41998e97f051a428d, type: 3}
+  m_Name: ShootBullet
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: bc76100ebd15577458127bc58f8ae282
+  position: {x: 109.7, y: 644.70416}
+  blackboard:
+    nodeIndex: 0
+    moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    target: {fileID: 0}
+    nodes: []
+  aiController: {fileID: 0}
+  parent: {fileID: 4970703242924194517}
+  description: 
+  shootingRange: 5
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347690af751b60743baa18f59df5c9c7, type: 3}
+  m_Name: Shoot Target
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -1841156526966360190}
+  treeState: 0
+  nodes:
+  - {fileID: -1841156526966360190}
+  - {fileID: 5957902253715225881}
+  - {fileID: -2916580346303638772}
+  - {fileID: -1573532523215425190}
+  - {fileID: -1207986698520952161}
+  - {fileID: 4970703242924194517}
+  - {fileID: -7505441275935422266}
+  - {fileID: 4060172571832355026}
+  - {fileID: -9049708660010634253}
+  blackboard:
+    nodeIndex: 0
+    moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 7069531293139987016, guid: 87d62d3cb0e622942b0c32b0291125f8, type: 3}
+    target: {fileID: 0}
+    nodes: []
+--- !u!114 &4060172571832355026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed17e90382a11c4fb3eaeb845525ca4, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 82f7a5bef6867b14799c73afca8e3642
+  position: {x: 7, y: 393}
+  blackboard:
+    nodeIndex: 0
+    moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    target: {fileID: 0}
+    nodes: []
+  aiController: {fileID: 0}
+  parent: {fileID: -1573532523215425190}
+  description: 
+  duration: 1
+--- !u!114 &4970703242924194517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0244e1060f055ec4caaf708739f68e12, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 418f63a8f52efbb499f0335efa8d7ecd
+  position: {x: 229, y: 512}
+  blackboard:
+    nodeIndex: 0
+    moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    target: {fileID: 0}
+    nodes: []
+  aiController: {fileID: 0}
+  parent: {fileID: -9049708660010634253}
+  description: Crash on fail
+  children:
+  - {fileID: -1207986698520952161}
+  - {fileID: -7505441275935422266}
+  crashOnFail: 1
+  stopAtFirstSuccess: 0
+--- !u!114 &5957902253715225881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf29b5ece97e0e428e27c27d668fe37, type: 3}
+  m_Name: RepeatNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 28cba1b80aeb5774b8090342bafcca47
+  position: {x: -1, y: 134}
+  blackboard:
+    nodeIndex: 0
+    moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    target: {fileID: 0}
+    nodes: []
+  aiController: {fileID: 0}
+  parent: {fileID: -1841156526966360190}
+  description: 
+  child: {fileID: -1573532523215425190}
+  inviteLoop: 1
+  crashOnFail: 0
+  loopCount: 100

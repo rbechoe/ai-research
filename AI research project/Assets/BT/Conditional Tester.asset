@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8988408841931030305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c8ca8015d05d4e448ad4f5f46786c05, type: 3}
+  m_Name: ConditionalNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 75119b0a101642344bee70dd0e54d9bb
+  position: {x: 204.99998, y: 7.065007}
+  blackboard:
+    moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
+  aiController: {fileID: 0}
+  parent: {fileID: -8545539167736816285}
+  description: Is player here? Crash on no
+  child: {fileID: 3847739608668874829}
+  conditionType: 0
+  typeParents:
+  - {fileID: 1430146981996273458}
+  - {fileID: 4504289542262268822}
+  crashOnFalse: 1
 --- !u!114 &-8545539167736816285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,15 +46,19 @@ MonoBehaviour:
   state: 2
   started: 0
   guid: 5f6b309a9716571468a0797e4f3c4996
-  position: {x: 371.00003, y: -120.98209}
+  position: {x: 371, y: -121.99999}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 505381335953116420}
-  description: 
-  children: []
+  description: Move to player if not here
+  children:
+  - {fileID: -8988408841931030305}
+  - {fileID: 2177481410476891365}
   crashOnFail: 0
   stopAtFirstSuccess: 1
 --- !u!114 &-1260202221053693982
@@ -43,9 +78,11 @@ MonoBehaviour:
   guid: 3566188b3d996944aaa880099f7f6ac9
   position: {x: 371.00003, y: -362.19086}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: 0}
   description: 
@@ -68,10 +105,17 @@ MonoBehaviour:
   - {fileID: -1260202221053693982}
   - {fileID: -8545539167736816285}
   - {fileID: 505381335953116420}
+  - {fileID: -8988408841931030305}
+  - {fileID: 4504289542262268822}
+  - {fileID: 1430146981996273458}
+  - {fileID: 3847739608668874829}
+  - {fileID: 2177481410476891365}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
 --- !u!114 &505381335953116420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,9 +133,11 @@ MonoBehaviour:
   guid: 86984c23943ab0749a3cc668027a87a0
   position: {x: 371.00003, y: -243.66997}
   blackboard:
-    destination: {x: 0, y: 0, z: 0}
-    moveToObject: {fileID: 0}
     moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
   aiController: {fileID: 0}
   parent: {fileID: -1260202221053693982}
   description: 
@@ -99,3 +145,107 @@ MonoBehaviour:
   inviteLoop: 1
   crashOnFail: 0
   loopCount: 100
+--- !u!114 &1430146981996273458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d2dc1b055a804d4f9e7dcf556685087, type: 3}
+  m_Name: Vector3Node
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 0bcd6483215527844897905c97fcf470
+  position: {x: 2.3225029, y: -124.83748}
+  blackboard:
+    moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
+  aiController: {fileID: 0}
+  parent: {fileID: 0}
+  description: My position
+  child: {fileID: -8988408841931030305}
+  value: {x: 0, y: 0, z: 0}
+--- !u!114 &2177481410476891365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3451afd28e2f9024db1d45e5ba5cabcb, type: 3}
+  m_Name: MoveToDestination
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 973d24673659536409ade4189f2411b9
+  position: {x: 554, y: 5}
+  blackboard:
+    moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
+  aiController: {fileID: 0}
+  parent: {fileID: -8545539167736816285}
+  description: 
+--- !u!114 &3847739608668874829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 070541dc3389c8b41998e97f051a428d, type: 3}
+  m_Name: ShootBullet
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 76f898ec7a24ebc4d9a64aa92710e9c0
+  position: {x: 197, y: 136.28252}
+  blackboard:
+    moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
+  aiController: {fileID: 0}
+  parent: {fileID: -8988408841931030305}
+  description: 
+--- !u!114 &4504289542262268822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d2dc1b055a804d4f9e7dcf556685087, type: 3}
+  m_Name: Vector3Node
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: c97afdaccfe619c4ea78fc37b515128d
+  position: {x: 197.00005, y: -130.12747}
+  blackboard:
+    moveSpeed: 0
+    destination: {x: 0, y: 0, z: 0}
+    bulletPrefab: {fileID: 0}
+    nodeIndex: 0
+    nodes: []
+  aiController: {fileID: 0}
+  parent: {fileID: 0}
+  description: Player position
+  child: {fileID: -8988408841931030305}
+  value: {x: 0, y: 0, z: 0}

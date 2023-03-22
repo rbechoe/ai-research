@@ -1,8 +1,7 @@
 using UnityEngine;
 
-public class DebugLogNode : ActionNode
+public class SelectNewNode : ActionNode
 {
-    public string message;
 
     protected override void OnStart()
     {
@@ -14,7 +13,7 @@ public class DebugLogNode : ActionNode
 
     protected override State OnUpdate()
     {
-        Debug.Log($"{message}");
+        blackboard.nodeIndex = Random.Range(0, blackboard.nodes.Length);
         return State.Success;
     }
 }
